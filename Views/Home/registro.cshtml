@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Registro";
+}
+//Hecho con Copilot
+<h2>Registro</h2>
+<form action="@Url.Action("GuardarUsuario", "Home")" method="post" class="form-register">
+    <div class="mb-3">
+        <label for="username" class="form-label">Nombre de usuario</label>
+        <input type="text" class="form-control" id="username" name="nombreUsuario" placeholder="Ingresar nombre de usuario" required />
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="password" name="contraseña" placeholder="Ingresar contraseña" required />
+    </div>
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresar nombre" required />
+    </div>
+    <div class="mb-3">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingresar apellido" required />
+    </div>
+    <div class="mb-3">
+        <label for="tipoUsuario" class="form-label">Tipo de usuario</label>
+        <select class="form-select" id="tipoUsuario" name="tipoUsuario" required>
+            <option value="">Seleccione una opción</option>
+            <option value="Alumno">Alumno</option>
+            <option value="Docente">Docente</option>
+            <option value="Coordinador">Coordinador</option>
+            <option value="Padre">Padre</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-success">Registrar</button>
+</form>
+
+<p class="mt-3">¿Ya tienes cuenta? <a href="@Url.Action("Index", "Home")">Ir al inicio de sesión</a></p>

@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Iniciar sesión";
+}
+//Hecho con Copilot
+
+<h2>Iniciar sesión</h2>
+<form action="@Url.Action("login", "Home")" method="post" class="form-login">
+    <div>
+        <label for="username" class="form-label">Nombre de usuario</label>
+        <input type="text" class="form-control" id="username" name="nombreUsuario" placeholder="Ingresar nombre de usuario" required />
+    </div>
+    <div>
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="password" name="contraseña" placeholder="Ingresar contraseña" required />
+    </div>
+    <button type="submit">Iniciar sesión</button>
+</form>
+
+<p>¿No tienes cuenta? <a href="@Url.Action("Registro", "Home")">Ir al registro</a></p>
