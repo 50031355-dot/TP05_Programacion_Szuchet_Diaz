@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E6qZJWmAVj8=",
+  "dgSpecHash": "o2GtsnZJHx0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\50031355\\WD2_ARTE_SZUCHET_DIAZ\\TP05_Programacion_Szuchet_Diaz\\tp05.csproj",
+  "projectFilePath": "C:\\Users\\50031355\\TP05_Programacion_Szuchet_Diaz\\tp05.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\50031355\\.nuget\\packages\\dapper\\2.1.79\\dapper.2.1.79.nupkg.sha512",
     "C:\\Users\\50031355\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.13\\microsoft.bcl.cryptography.9.0.13.nupkg.sha512",

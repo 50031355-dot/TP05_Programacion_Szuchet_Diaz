@@ -2,9 +2,11 @@
     ViewData["Title"] = "Iniciar sesión";
 }
 //Hecho con Copilot
+<script src="js/site.js"></script>
 
 <h2>Iniciar sesión</h2>
-<form action="@Url.Action("login", "Home")" method="post" class="form-login">
+<form action="@Url.Action("Login", "Home")" method="post" class="form-login">
+    <h1>@ViewBag.Error</h1>
     <div>
         <label for="username" class="form-label">Nombre de usuario</label>
         <input type="text" class="form-control" id="username" name="nombreUsuario" placeholder="Ingresar nombre de usuario" required />

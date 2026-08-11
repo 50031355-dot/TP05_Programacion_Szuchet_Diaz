@@ -1,9 +1,12 @@
 @{
     ViewData["Title"] = "Registro";
 }
+<script src="js/site.js"></script>
+
 //Hecho con Copilot
 <h2>Registro</h2>
-<form action="@Url.Action("GuardarUsuario", "Home")" method="post" class="form-register">
+<h2>@ViewBag.Error</h2>
+<form action="@Url.Action("Registro", "Home")" method="post" class="form-register">
     <div class="mb-3">
         <label for="username" class="form-label">Nombre de usuario</label>
         <input type="text" class="form-control" id="username" name="nombreUsuario" placeholder="Ingresar nombre de usuario" required />

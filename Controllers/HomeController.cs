@@ -22,10 +22,33 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult Registro()
+    
+
+    public IActionResult Login(string nombreUsuario, string contrasena)
     {
-        
-        return View();
+        bool validarLogin=BD.ValidarLogin(nombreUsuario, contrasena);
+        if(validarLogin)
+        {
+            return View("bienvenida");
+        }
+        else
+        {
+            ViewBag.Error = "Usuario o contraseña incorrectos";
+            return View("login");
+        }
+    }
+    public IActionResult Registro(Usuarios usuario)
+    {
+        bool validarRegistro = BD.ValidarRegistro(usuario);
+        if (validarRegistro)
+        {
+            return View("login");
+        }
+        else
+        {
+            ViewBag.Error = "El usuario ya existe";
+            return View("registro");
+        }
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
