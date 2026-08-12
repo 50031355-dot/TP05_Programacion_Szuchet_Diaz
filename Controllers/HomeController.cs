@@ -23,10 +23,10 @@ public class HomeController : Controller
         return View();
     }
     
-
-    public IActionResult Login(string nombreUsuario, string contrasena)
+    [HttpPost]
+    public IActionResult Login(string nombreUsuario, string contraseña)
     {
-        bool validarLogin=BD.ValidarLogin(nombreUsuario, contrasena);
+        bool validarLogin=BD.ValidarLogin(nombreUsuario, contraseña);
         if(validarLogin)
         {
             return View("bienvenida");
@@ -37,10 +37,17 @@ public class HomeController : Controller
             return View("login");
         }
     }
-    public IActionResult Registro(Usuarios usuario)
+
+    public IActionResult Registro()
+    {
+        return View("registro");
+    }
+
+    [HttpPost]
+    public IActionResult ValidarRegistro(Usuarios usuario)
     {
         bool validarRegistro = BD.ValidarRegistro(usuario);
-        if (validarRegistro)
+        if (!validarRegistro)
         {
             return View("login");
         }
