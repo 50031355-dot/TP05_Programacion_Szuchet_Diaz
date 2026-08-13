@@ -2,10 +2,11 @@
     ViewData["Title"] = "Bienvenidos";
 }
 <script src="js/site.js"></script>
+
 <section class="welcome-hero">
     <div class="row align-items-center g-4">
         <div class="col-lg-7">
-            <span class="welcome-badge">Bienvenidos a tp05</span>
+            <span class="welcome-badge">Bienvenidos a tp05, @ViewBag.nombreUsuario</span>
             <h1>Tu próximo paso comienza aquí.</h1>
             <p class="lead">
                 Descubrí una experiencia moderna, simple y pensada para ayudarte a organizar,
@@ -14,6 +15,7 @@
             <div class="d-flex flex-wrap gap-3 mt-4">
                 <a class="btn btn-primary btn-lg px-4" href="#features">Comenzar</a>
                 <a class="btn btn-outline-secondary btn-lg px-4" href="#about">Más información</a>
+                <a href="@Url.Action("logout", "Home")">Cerrar sesión</a>
             </div>
         </div>
 

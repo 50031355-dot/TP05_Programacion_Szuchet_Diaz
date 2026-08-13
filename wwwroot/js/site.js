@@ -7,12 +7,13 @@
 function VerificarUsuario(){
     let nombreUsuario = document.getElementById("nombreUsuario").value;
     let contraseña = document.getElementById("contraseña").value;
-    if (nombreUsuario.length < 8 || contraseña.length <8) {
-        console.log("El nombre de usuario y la contraseña deben tener al menos 8 caracteres.");
-        return false; 
+    
+
+    if (nombreUsuario.length < 8 || contraseña.length < 8 || nombreUsuario.trim() === "" || contraseña.trim() === "" || !caracteresValidos.test(nombreUsuario) || !caracteresValidos.test(contraseña)) {
+        console.error("Error: El nombre de usuario y la contraseña deben tener al menos 8 caracteres.");
+        return false;
     }
-    else{
-        console.log("El nombre de usuario y la contraseña cumplen con los requisitos.");
-        return true; 
-    }
+
+    console.log("Éxito: El nombre de usuario y la contraseña cumplen con todos los requisitos.");
+    return true;
 }

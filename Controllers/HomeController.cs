@@ -24,15 +24,18 @@ public class HomeController : Controller
     }
     
     [HttpPost]
-    public IActionResult Login(string nombreUsuario, string contraseña)
+    public IActionResult Login(string nombreUsuario, string contrasena)
     {
-        bool validarLogin=BD.ValidarLogin(nombreUsuario, contraseña);
+        bool validarLogin=BD.ValidarLogin(nombreUsuario, contrasena);
         if(validarLogin)
         {
+            HttpContext.Session.SetString("nombreUsuario", nombreUsuario);
+            ViewBag.nombreUsuario=nombreUsuario;
             return View("bienvenida");
         }
         else
         {
+            Console.WriteLine(validarLogin);
             ViewBag.Error = "Usuario o contraseña incorrectos";
             return View("login");
         }
@@ -47,15 +50,27 @@ public class HomeController : Controller
     public IActionResult ValidarRegistro(Usuarios usuario)
     {
         bool validarRegistro = BD.ValidarRegistro(usuario);
-        if (!validarRegistro)
+        if (validarRegistro)
         {
-            return View("login");
+            HttpContext.Session.SetString("nombreUsuario", usuario.nombreUsuario);
+            ViewBag.nombreUsuario = usuario.nombreUsuario;
+            return View("bienvenida");
         }
         else
         {
+            Console.WriteLine(validarRegistro);
             ViewBag.Error = "El usuario ya existe";
             return View("registro");
         }
+    }
+    public IActionResult logout()
+    {
+        return View();
+    }
+    public IActionResult ValidarLogout()
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction("Index");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
