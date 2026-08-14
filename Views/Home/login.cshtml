@@ -15,7 +15,7 @@
         <label for="password" class="form-label">Contraseña</label>
         <input type="password" class="form-control" id="password" name="contrasena" placeholder="Ingresar contraseña" required />
     </div>
-    <button onlick= type="submit">Iniciar sesión</button>
+    <button onclick="return VerificarCaracteres()" type="submit">Iniciar sesión</button>
 </form>
 
 <p>¿No tienes cuenta? <a href="@Url.Action("Registro", "Home")">Ir al registro</a></p>

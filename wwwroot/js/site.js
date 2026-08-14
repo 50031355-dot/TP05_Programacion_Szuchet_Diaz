@@ -4,7 +4,8 @@
 // Write your JavaScript code.
 
 
-function VerificarUsuario(){
+function VerificarCaracteres(){
+    console.log("Verificando caracteres...");
     let nombreUsuario = document.getElementById("nombreUsuario").value;
     let contraseña = document.getElementById("contraseña").value;
     
