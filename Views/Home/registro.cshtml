@@ -6,8 +6,9 @@
 
 <h2>Registro</h2>
 <h2>@ViewBag.Error</h2>
-<form action="@Url.Action("ValidarRegistro", "Home")" method="post" class="form-register">
+<form action="@Url.Action("ValidarRegistro", "Home")" method="post" class="form-register" onsubmit="return VerificarCaracteres()">
     <div class="mb-3">
+        <p id="secreto"></p>
         <label for="username" class="form-label">Nombre de usuario</label>
         <input type="text" class="form-control" id="username" name="nombreUsuario" placeholder="Ingresar nombre de usuario" required />
     </div>
@@ -33,7 +34,7 @@
             <option value="Padre">Padre</option>
         </select>
     </div>
-    <button type="submit" onclick="return VerificarCaracteres()" class="btn btn-success">Registrar</button>
+    <button type="submit"  class="btn btn-success">Registrar</button>
 </form>
 
 <p class="mt-3">¿Ya tienes cuenta? <a href="@Url.Action("Index", "Home")">Ir al inicio de sesión</a></p>

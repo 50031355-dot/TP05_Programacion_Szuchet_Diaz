@@ -281,7 +281,6 @@ C:\Users\50031355\TP05_Programacion_Szuchet_Diaz\obj\Debug\net9.0\refint\tp05.dl
 C:\Users\50031355\TP05_Programacion_Szuchet_Diaz\obj\Debug\net9.0\tp05.pdb
 C:\Users\50031355\TP05_Programacion_Szuchet_Diaz\obj\Debug\net9.0\tp05.genruntimeconfig.cache
 C:\Users\50031355\TP05_Programacion_Szuchet_Diaz\obj\Debug\net9.0\ref\tp05.dll
-C:\Users\50031355\TP05_Programacion_Szuchet_Diaz\obj\Debug\net9.0\compressed\9breeycsha-0ewa94tuw2.gz
 C:\TP05_Programacion_Szuchet_Diaz\bin\Debug\net9.0\appsettings.Development.json
 C:\TP05_Programacion_Szuchet_Diaz\bin\Debug\net9.0\appsettings.json
 C:\TP05_Programacion_Szuchet_Diaz\bin\Debug\net9.0\tp05.staticwebassets.runtime.json
@@ -420,3 +419,4 @@ C:\TP05_Programacion_Szuchet_Diaz\obj\Debug\net9.0\refint\tp05.dll
 C:\TP05_Programacion_Szuchet_Diaz\obj\Debug\net9.0\tp05.pdb
 C:\TP05_Programacion_Szuchet_Diaz\obj\Debug\net9.0\tp05.genruntimeconfig.cache
 C:\TP05_Programacion_Szuchet_Diaz\obj\Debug\net9.0\ref\tp05.dll
+C:\Users\50031355\TP05_Programacion_Szuchet_Diaz\obj\Debug\net9.0\compressed\9breeycsha-gwysrzh00q.gz
